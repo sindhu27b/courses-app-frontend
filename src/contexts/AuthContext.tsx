@@ -20,7 +20,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Replace with your Spring Boot backend URL
-const API_BASE_URL = 'http://localhost:8080/api';
+// const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://courses-app-backend-production.up.railway.app/api';
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -66,7 +67,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const loginWithGoogle = () => {
     // Redirect to Spring Boot OAuth2 authorization endpoint
-    window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+    // window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+     window.location.href = 'https://courses-app-backend-production.up.railway.app/oauth2/authorization/google';
   };
    const loginWithEmail = async (email: string, password: string): Promise<{ error: string | null }> => {
     try {

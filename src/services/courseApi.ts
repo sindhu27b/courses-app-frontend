@@ -1,6 +1,7 @@
 import { Course } from '@/data/courses';
 
-const API_BASE_URL = 'http://localhost:8080/api';
+// const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://courses-app-backend-production.up.railway.app/api';
 
 export const courseApi = {
   async getAllCourses(): Promise<Course[]> {

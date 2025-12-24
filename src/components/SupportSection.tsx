@@ -8,7 +8,8 @@ const SupportSection = () => {
   const handleSupport = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8080/api/payments/create-checkout-session', {
+      //const response = await fetch('http://localhost:8080/api/payments/create-checkout-session', {
+        const response = await fetch('https://courses-app-backend-production.up.railway.app/api/payments/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: 500 }) // $5.00 default donation
